@@ -1,16 +1,21 @@
 const TableRow = (product) => {
-  const { id, name, stock, price } = product;
+  const { id, name, stock, price, quantity, total, increment, decrement } =
+    product;
   return (
     <tr>
       <td>{id}</td>
       <td>{name}</td>
-      <td>{stock}</td>
-      <td>{price}</td>
-      <td>0</td>
-      <td>0</td>
       <td>
-        <button>+</button>
-        <button>-</button>
+        {quantity}/{stock}
+      </td>
+      <td>{price}</td>
+      <td>{quantity}</td>
+      <td>{total}</td>
+      <td>
+        <button onClick={() => increment(id)} disabled={quantity === stock}>
+          +
+        </button>
+        <button onClick={() => decrement(id)}>-</button>
       </td>
     </tr>
   );
