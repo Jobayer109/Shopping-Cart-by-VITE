@@ -1,26 +1,24 @@
-import shortid from "shortid";
-
 const productList = [
   {
-    id: shortid.generate(),
+    id: 1,
     name: "Mouse",
     stock: 10,
     price: 150,
   },
   {
-    id: shortid.generate(),
+    id: 2,
     name: "Keyboard",
     stock: 16,
     price: 160,
   },
   {
-    id: shortid.generate(),
+    id: 3,
     name: "Watch",
     stock: 20,
     price: 250,
   },
   {
-    id: shortid.generate(),
+    id: 4,
     name: "Pant",
     stock: 14,
     price: 180,
