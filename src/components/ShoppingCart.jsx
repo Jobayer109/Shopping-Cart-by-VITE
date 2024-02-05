@@ -31,7 +31,7 @@ const ShoppingCart = () => {
     updateQuantity(id, -1);
   };
 
-  const total = products.reduce((acc, cur) => acc + cur.price, 0);
+  const total = products.reduce((acc, cur) => acc + cur.total, 0);
 
   return (
     <div>
@@ -56,9 +56,7 @@ const ShoppingCart = () => {
           ))}
         </tbody>
       </table>
-      <div>
-        <h5>Total: {total} TK</h5>{" "}
-      </div>
+      <div>{total > 0 && <h5>Total: {total} TK</h5>}</div>
     </div>
   );
 };
